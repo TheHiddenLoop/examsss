@@ -10,7 +10,7 @@ export const CardProvider=({children})=>{
 
     async function getData() {
         try {
-            const res=await axios.get("http://localhost:3000/api/all/card");
+            const res=await axios.get("https://examsss-2.onrender.com/api/all/card");
             setData(res.data.card);
       
             

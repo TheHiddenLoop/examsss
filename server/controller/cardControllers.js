@@ -35,7 +35,7 @@ export const updateCardData=async (req, res) => {
     try {
         const id=req.param.id;
     const { name, address, contact, website } = req.body;
-    const updateData=await Card.findByIdAndUpdate(id, {name, contact, address,website },{});
+    const updateData=await Card.findByIdAndUpdate(id, {name, contact, address,website },{ new: true });
     if(!updateCardData){
       return res.json({ success: false, message: "Id not exist." });
     }
